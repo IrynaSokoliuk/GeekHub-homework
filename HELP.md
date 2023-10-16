@@ -1,6 +1,5 @@
 
 # GIT HELP
-
 echo "# GeekHub-homework" >> README.md
 git init
 git add README.md
