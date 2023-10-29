@@ -14,9 +14,9 @@ y = int(input("Write a number: "))
 
 def result(x, y):
     if x > y:
-        print(f"х бiльше нiж у на {x-y}")
+        print(f"х бiльше нiж у на {x - y}")
     elif x < y:
-        print(f"у бiльше нiж х на {y-x}")
+        print(f"у бiльше нiж х на {y - x}")
     elif x == y:
         print(f"х дорiвнює {x}\ny дорiвнює {y} ")
 

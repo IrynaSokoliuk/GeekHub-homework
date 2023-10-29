@@ -6,6 +6,7 @@
 Не забудьте протестувати з різними значеннями на предмет помилок!
 '''
 
+
 def get_number():
     while True:
         num = input("Напишіть число: ")
@@ -19,7 +20,7 @@ def get_number():
 def get_operation():
     while True:
         operation = input("Напишіть математичну операцію(+, -, *, /, %, //, **): ")
-        operations = ["+", "-", "*", "/","%", "//", "**"]
+        operations = ["+", "-", "*", "/", "%", "//", "**"]
         if operation in operations:
             return operation
         else:

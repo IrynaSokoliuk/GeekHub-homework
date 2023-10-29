@@ -7,6 +7,7 @@
 Таким чином ми будемо викликати одну (четверту) функцiю, а вона в своєму тiлi - ще 3.
 '''
 
+
 def get_and_print_name():
     name = input("Write your name: ")
     print(f"Welcome to Python world, {name}")
@@ -35,5 +36,6 @@ def super_test():
         result = check_answer(answer)
         if result is True:
             break
+
 
 super_test()
