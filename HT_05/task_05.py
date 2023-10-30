@@ -40,11 +40,17 @@ def calculate(a, b, c):
     elif c == "*":
         print(f"Відповідь: {a * b} ")
     elif c == "/":
-        print(f"Відповідь: {a / b} ")
+        if a == 0:
+            print("На нуль ділити не можна!")
+        else:
+            print(f"Відповідь: {a / b} ")
     elif c == "%":
         print(f"Відповідь: {a % b} ")
     elif c == "//":
-        print(f"Відповідь: {a // b} ")
+        if a == 0:
+            print("На нуль ділити не можна!")
+        else:
+            print(f"Відповідь: {a // b} ")
     elif c == "**":
         print(f"Відповідь: {a ** b} ")
 
