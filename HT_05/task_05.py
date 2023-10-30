@@ -19,7 +19,7 @@ def get_number():
 
 def get_operation():
     while True:
-        operation = input("Напишіть математичну операцію(+, -, *, /, %, //, **): ")
+        operation = input("Напишіть математичну операцію (+, -, *, /, %, //, **): ")
         operations = ["+", "-", "*", "/", "%", "//", "**"]
         if operation in operations:
             return operation

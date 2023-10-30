@@ -5,7 +5,7 @@
 '''
 
 
-def season(month: int) -> str:
+def season(month: int):
     if month in [1, 2, 12]:
         print("Вашій цифрі відповидає пора року - Зима")
     elif month in [3, 4, 5]:
@@ -19,4 +19,4 @@ def season(month: int) -> str:
 
 
 month = int(input("Введіть номер місяця (від 1 до 12): "))
-result = season(month)
+season(month)

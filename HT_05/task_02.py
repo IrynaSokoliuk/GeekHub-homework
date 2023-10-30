@@ -11,11 +11,13 @@
 def get_and_print_name():
     name = input("Write your name: ")
     print(f"Welcome to Python world, {name}")
+    return name
 
 
 def get_and_print_age():
     age = input("Write your age: ")
     print(f"Your age is {age}")
+    return age
 
 
 def check_answer(res):
