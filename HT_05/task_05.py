@@ -32,27 +32,27 @@ b = get_number()
 c = get_operation()
 
 
-def calculate(a, b, c):
-    if c == "-":
-        print(f"Відповідь: {a - b} ")
-    elif c == "+":
-        print(f"Відповідь: {a + b} ")
-    elif c == "*":
-        print(f"Відповідь: {a * b} ")
-    elif c == "/":
-        if a == 0:
+def calculate(x, y, operation):
+    if operation == "-":
+        print(f"Відповідь: {x - y} ")
+    elif operation == "+":
+        print(f"Відповідь: {x + y} ")
+    elif operation == "*":
+        print(f"Відповідь: {x * y} ")
+    elif operation in "/":
+        if y == 0:
             print("На нуль ділити не можна!")
         else:
-            print(f"Відповідь: {a / b} ")
-    elif c == "%":
-        print(f"Відповідь: {a % b} ")
-    elif c == "//":
-        if a == 0:
+            print(f"Відповідь: {x / y} ")
+    elif operation == "//":
+        if y == 0:
             print("На нуль ділити не можна!")
         else:
-            print(f"Відповідь: {a // b} ")
-    elif c == "**":
-        print(f"Відповідь: {a ** b} ")
+            print(f"Відповідь: {x // y} ")
+    elif operation == "%":
+        print(f"Відповідь: {x % y} ")
+    elif operation == "**":
+        print(f"Відповідь: {x ** y} ")
 
 
 calculate(a, b, c)
