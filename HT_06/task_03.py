@@ -20,4 +20,4 @@ def is_prime(n):
     return False
 
 
-is_prime(89)
+is_prime()
