@@ -26,4 +26,4 @@ def validation(name, password):
         raise InvalidDataException
 
 
-validation()
+validation("Iryna", "somepassword123")

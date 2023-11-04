@@ -32,5 +32,5 @@ def security(username, password, silent=False):
             raise LoginException("Error")
 
 
-result = security()
+result = security("Iryna", "somepassword123")
 print(f"Result login is {result}")
