@@ -15,22 +15,24 @@ class LoginException(Exception):
 
 
 def security(username, password, silent=False):
-    db = {
-        "a": 1,
-        "b": 2,
-        "c": 3,
-        "d": 4,
-        "e": 5
-    }
+    db = [
+        {"username": "Alina", "password": "1g^fhjmgasc"},
+        {"username": "Alika", "password": "2JK7dfg&D62gfefk"},
+        {"username": "Apika", "password": "3SDKU^rFDSU"},
+        {"username": "Aladin", "password": "4sdf"},
+        {"username": "Alan", "password": "5sdf"}
+    ]
 
-    if username in db and str(password) == str(db[username]):
-        return True
+    for i in db:
+        if i["username"] == username and i["password"] == password:
+            print(username)
+            return True
+
+    if silent is True:
+        return False
     else:
-        if silent is True:
-            return False
-        else:
-            raise LoginException("Error")
+        raise LoginException("Error")
 
 
-result = security("Iryna", "somepassword123")
+result = security("Alan", "5sdf")
 print(f"Result login is {result}")

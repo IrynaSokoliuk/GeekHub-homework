@@ -27,15 +27,12 @@ def morse_code(morse_string):
     }
 
     morse_list = morse_string.split(' ')
-    decoded_message = ""
-
-    for morse_symbol in morse_list:
-        if morse_symbol in morse_code_dict.keys():
-            decoded_message += morse_code_dict[morse_symbol]
-        else:
-            print(morse_symbol)
-            decoded_message += " "
-    return decoded_message
+    return "".join(
+        morse_code_dict[morse_symbol]
+        if morse_symbol in morse_code_dict
+        else " "
+        for morse_symbol in morse_list
+    )
 
 
 morse_input = "--. . . -.- .... ..- -...  .. ...  .... . .-. ."
