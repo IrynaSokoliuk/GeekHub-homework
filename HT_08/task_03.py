@@ -21,9 +21,13 @@ def my_range(start, stop, step=1):
         while start < stop:
             yield start
             start += step
+    if start > stop:
+        while start > stop:
+            yield start
+            start -= step
     else:
         return
 
 
-for i in my_range(2, 10, 5):
+for i in my_range(0, -10, 1):
     print(i)
