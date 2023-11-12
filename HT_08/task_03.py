@@ -17,17 +17,20 @@
 
 
 def my_range(start, stop, step=1):
-    if start < stop:
-        while start < stop:
-            yield start
-            start += step
-    if start > stop:
-        while start > stop:
-            yield start
-            start -= step
+    if stop is None:
+        start, stop = 0, start
+    current_element = start
+    if step > 0:
+        while current_element < stop:
+            yield current_element
+            current_element += step
+    elif step < 0:
+        while current_element > stop:
+            yield current_element
+            current_element += step
     else:
-        return
+        raise ValueError("Step must not be zero")
 
 
-for i in my_range(0, -10, 1):
+for i in my_range(1, -10, 5):
     print(i)
