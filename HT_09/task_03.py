@@ -86,7 +86,7 @@ def login():
         reader = csv.reader(f)
         for user in reader:
             if user[0] == username and user[1] == password:
-                print("Вхід успішний")
+                print("Вхід успішний!")
                 return username
         else:
             print("Неправильні данні. До побачення!")
