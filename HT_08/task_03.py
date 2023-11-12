@@ -16,7 +16,7 @@
 """
 
 
-def my_range(start, stop, step=1):
+def my_range(start=0, stop=None, step=1):
     if stop is None:
         start, stop = 0, start
     current_element = start
@@ -32,5 +32,5 @@ def my_range(start, stop, step=1):
         raise ValueError("Step must not be zero")
 
 
-for i in my_range(1, -10, 5):
+for i in my_range(10):
     print(i)
