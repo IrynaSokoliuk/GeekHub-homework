@@ -21,21 +21,23 @@
 """
 
 
-from time import sleep
+import time
 
 
 def traffic_light():
-    config = {
-        "Red - Green": 4,
-        "Yellow - Red": 2,
-        "Green - Red": 4,
-    }
-
     while True:
-        for lights, qty in config.items():
-            for i in range(qty):
-                sleep(1)
-                print(lights)
+        for _ in range(4):
+            time.sleep(1)
+            print("Red - Green")
+        for _ in range(2):
+            time.sleep(1)
+            print("Yellow - Red")
+        for _ in range(4):
+            time.sleep(1)
+            print("Green - Red")
+        for _ in range(2):
+            time.sleep(1)
+            print("Yellow - Red")
 
 
 traffic_light()

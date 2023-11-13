@@ -19,7 +19,10 @@ def process_file(file_path, qty_symbols):
                 raise ValueError("Кількість символів більша, ніж загальна кількість символів у файлі.")
 
             middle_index = len(content) // 2
-            middle_block = content[middle_index - qty_symbols // 2: middle_index + qty_symbols // 2]
+            if qty_symbols % 2 == 0:
+                middle_block = content[middle_index - qty_symbols // 2: middle_index + qty_symbols // 2]
+            else:
+                middle_block = content[middle_index - qty_symbols // 2: middle_index + qty_symbols // 2 + 1]
 
             print(f"Початок файлу: {content[:qty_symbols]}")
             print(f"Середина файлу: {middle_block}")
@@ -32,6 +35,6 @@ def process_file(file_path, qty_symbols):
 
 
 file_path = "task_2.txt"
-qty_symbols = 4
+qty_symbols = 3
 
 process_file(file_path, qty_symbols)

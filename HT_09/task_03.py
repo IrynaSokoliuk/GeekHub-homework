@@ -31,6 +31,11 @@ import csv
 import json
 
 
+def is_number_positive(num: int):
+    if num > 0:
+        return True
+
+
 def write_to_balance_txt(username, value):
     with open(f"{username}_balance.txt", "w") as f:
         f.write(str(value))
@@ -101,6 +106,8 @@ def view_balance(username):
 def put_cash(username):
     try:
         amount = int(input("Введіть суму на яку хочете поповнити баланс: "))
+        if not is_number_positive(amount):
+            raise ValueError
         balance = get_balance_from_balance_txt(username)
         result = balance + amount
         write_to_balance_txt(username, result)
@@ -114,6 +121,9 @@ def put_cash(username):
 def get_cash(username):
     try:
         amount = int(input("Введіть суму яку хочете зняти з балансу: "))
+        if not is_number_positive(amount):
+            raise ValueError
+
         balance = get_balance_from_balance_txt(username)
 
         if balance >= amount:
